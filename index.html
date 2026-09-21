@@ -3,41 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gowru Devi Vara Venkata Sai | Professional Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gowru Devi Vara Venkata Sai</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-vlsi: #38bdf8;
+            --accent-ds: #c084fc;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            color: var(--accent-vlsi);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Domain Switcher */
+        .switcher-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .switch-btn {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 2px solid var(--border-color);
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .switch-btn.active-vlsi {
+            background-color: var(--accent-vlsi);
+            color: #0f172a;
+            border-color: var(--accent-vlsi);
+        }
+
+        .switch-btn.active-ds {
+            background-color: var(--accent-ds);
+            color: #0f172a;
+            border-color: var(--accent-ds);
+        }
+
+        .portfolio-section {
+            display: none;
+        }
+
+        .portfolio-section.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-vlsi);
+            padding-left: 10px;
+            color: #f1f5f9;
+        }
+
+        .data-science-theme h2 {
+            border-left-color: var(--accent-ds);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        .card p, .card li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col justify-between">
+<body>
 
-    <div class="max-w-4xl mx-auto px-6 py-20 text-center space-y-6 flex-grow flex flex-col justify-center">
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Gowru Devi Vara Venkata Sai</h1>
-        <p class="text-indigo-300 text-lg">B.Tech Electronics & Communication Engineering (Batch of 2026)[cite: 2, 3]</p>
-        <p class="text-slate-400 max-w-xl mx-auto text-sm leading-relaxed">
-            Welcome to my professional portfolio. Because I specialize in two distinct technical fields, please choose the domain track you wish to explore below:
-        </p>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 max-w-2xl mx-auto w-full">
-            <a href="Datascience.html" class="bg-blue-600 hover:bg-blue-500 text-white p-6 rounded-xl shadow-lg transition flex flex-col items-center justify-center space-y-2 border border-blue-500">
-                <span class="text-3xl">📊</span>
-                <span class="font-bold text-lg">Data Analytics & ML</span>
-                <span class="text-xs text-blue-200 text-center">Predictive models, pipelines, Python & BI dashboards</span>
-            </a>
+<div class="container">
+    <header>
+        <h1>GOWRU DEVI VARA VENKATA SAI</h1>
+        <p>kingdsp204@gmail.com | +91 7675940436</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/dsp290930" target="_blank">LinkedIn</a>
+            <a href="https://github.com/DEVI-SAI-2004" target="_blank">GitHub</a>
+        </div>
+    </header>
 
-            <a href="vlsi.html" class="bg-purple-700 hover:bg-purple-600 text-white p-6 rounded-xl shadow-lg transition flex flex-col items-center justify-center space-y-2 border border-purple-600">
-                <span class="text-3xl">⚡</span>
-                <span class="font-bold text-lg">VLSI & Hardware Design</span>
-                <span class="text-xs text-purple-200 text-center">RTL, UVM Verification, AMBA Protocols & DFT</span>
-            </a>
+    <!-- Interactive Domain Switcher -->
+    <div class="switcher-wrapper">
+        <button id="btn-vlsi" class="switch-btn active-vlsi" onclick="switchDomain('vlsi')">⚡ VLSI & Hardware</button>
+        <button id="btn-ds" class="switch-btn" onclick="switchDomain('ds')">📊 Data Science & Analytics</button>
+    </div>
+
+    <!-- ================= VLSI PORTFOLIO ================= -->
+    <div id="portfolio-vlsi" class="portfolio-section active">
+        <h2>Professional Summary</h2>
+        <div class="card">
+            <h3></h3>
+            <p>A highly motivated and passionate B.Tech graduate in Electronics and Communication Engineering with a robust academic foundation in VLSI design, digital electronics, CMOS technology, and core communication systems[cite: 1]. Possesses hands-on experience in RTL coding with Verilog and SystemVerilog, functional Design Verification using UVM, and exposure to Physical Design and DFT[cite: 1]. Eager to deliver high-impact results as a Graduate Engineer Trainee, RTL, Design Verification, DFT, or Physical Design Engineer[cite: 1].</p>
+            <p><strong>Education:</strong> B.Tech in Electronics and Communication Engineering from Bapatla Engineering College (GPA: 7.8/10, Graduating April 2026)[cite: 1].</p>
         </div>
 
-        <div class="pt-8 flex justify-center gap-6 text-sm text-slate-400">
-            <a href="https://github.com/DEVI-SAI-2004" target="_blank" class="hover:text-white underline">GitHub Profile</a>
-            <a href="https://linkedin.com/in/dsp290930" target="_blank" class="hover:text-white underline">LinkedIn Profile</a>
+        <h2>Projects</h2>
+        <div class="card">
+            <h3>1. AMBA Bridge Design</h3>
+            <p><strong>Title:</strong> Designed and implemented an AMBA AHB2APB bridge to manage high-performance data transfers on a 32-bit bus infrastructure[cite: 1].</p>
+            <p><strong>Tech Stack / Tools:</strong> Verilog, SystemVerilog, EDA tools[cite: 1].</p>
+            <p><strong>My Role & Contributions:</strong> Developed RTL code for protocol conversions and created custom testbenches for functional verification under various wait states and data transfer simulations[cite: 1].</p>
+            <p><strong>Outcome:</strong> Validated design reliability, ensuring protocol compliance and performance robustness[cite: 1].</p>
+        </div>
+
+        <div class="card">
+            <h3>2. Verilog-based Pattern Detector Implementation</h3>
+            <p><strong>Title:</strong> Implemented a digital pattern detector to ensure correct state transitions and sequence recognition[cite: 1].</p>
+            <p><strong>Tech Stack / Tools:</strong> Verilog, Finite-State Machine (FSM)[cite: 1].</p>
+            <p><strong>My Role & Contributions:</strong> Programmed the FSM logic and improved a self-checking testbench to automate functional verification across diverse input sequences[cite: 1].</p>
+            <p><strong>Outcome:</strong> Ensured structural accuracy and debugged digital logic for reliable state behavior[cite: 1].</p>
+        </div>
+
+        <div class="card">
+            <h3>3. Implementation of Traffic Light Controller</h3>
+            <p><strong>Title:</strong> Designed an automated traffic light controller to demonstrate sequential circuit proficiency[cite: 1].</p>
+            <p><strong>Tech Stack / Tools:</strong> Verilog, SystemVerilog, UVM[cite: 1].</p>
+            <p><strong>My Role & Contributions:</strong> Developed a comprehensive verification environment using UVM, building a self-checking testbench with constrained random stimulus generation and functional coverage[cite: 1].</p>
+            <p><strong>Outcome:</strong> Achieved high verification closure and isolated critical design cases[cite: 1].</p>
+        </div>
+
+        <h2>Technical & Soft Skills</h2>
+        <div class="card">
+            <h3>Technical & Soft Skills</h3>
+            <div class="tags">
+                <span class="tag">Verilog-HDL</span><span class="tag">SystemVerilog</span><span class="tag">UVM</span><span class="tag">FSM Design</span><span class="tag">Testbench Development</span><span class="tag">Synopsys Design Compiler</span><span class="tag">Cadence EDA</span><span class="tag">Xilinx Vivado</span><span class="tag">ModelSim</span><span class="tag">Intel Quartus Prime</span><span class="tag">Sentaurus TCAD</span><span class="tag">Microwind</span><span class="tag">Python</span><span class="tag">Embedded C</span><span class="tag">Debugging</span><span class="tag">Team Collaboration</span>
+            </div>
+        </div>
+
+        <h2>Certifications</h2>
+        <div class="card">
+            <h3></h3>
+            <ul>
+                <li>Semiconductor Workforce Development — Samsung & Synopsys[cite: 1]</li>
+                <li>VLSI System-on-Chip Design & Design Methodologies — Maven Silicon[cite: 1]</li>
+                <li>Ethical Hacking and Cyber Security Applications — CISCO NWA[cite: 1]</li>
+            </ul>
+        </div>
+        <h2>Education</h2>
+        <div class="card">
+            <h3></h3>
+            <ul>
+                <li>B.Tech ECE — Bapatla Engineering College (GPA: 7.8/10)[cite: 1]</li>
+                <li>Intermediate (MPC) — Sri Chaitanya Junior College (85.40%)[cite: 1]</li>
+                <li>SSC — Sri Chaitanya Techno High School (99.99%)[cite: 1]</li>
+            </ul>
         </div>
     </div>
 
-    <footer class="bg-slate-950 text-slate-500 text-center py-6 text-xs">
-        <p>&copy; 2026 Gowru Devi Vara Venkata Sai. Hosted on GitHub Pages.</p>
+    <!-- ================= DATA SCIENCE PORTFOLIO ================= -->
+    <div id="portfolio-ds" class="portfolio-section data-science-theme">
+        <h2>Introduction / About Me</h2>
+        <div class="card">
+            <h3>Professional Summary</h3>
+            <p>Detail-oriented and highly motivated Electronics and Communication Engineering graduate with a strong academic foundation in data analytics, machine learning, and business intelligence[cite: 2]. Skilled in leveraging Python, SQL, Tableau, and Power BI to clean, process, and interpret complex data into actionable insights[cite: 2]. Seeking a challenging role as a Data Analyst, Data Scientist, Machine Learning Engineer, or Business Analyst[cite: 2].</p>
+            <p><strong>Education:</strong> B.Tech in Electronics and Communication Engineering from Bapatla Engineering College (GPA: 7.8/10, May 2026)[cite: 2].</p>
+        </div>
+
+        <h2>Projects</h2>
+        <div class="card">
+            <h3>1. Fraud Detection Model</h3>
+            <p><strong>Title:</strong> Developed a binary classification model to identify fraudulent credit card transactions amidst severe data imbalances[cite: 2].</p>
+            <p><strong>Tech Stack / Tools:</strong> Python, Scikit-learn, Random Forest, SMOTE[cite: 2].</p>
+            <p><strong>My Role & Contributions:</strong> Implemented SMOTE for class imbalance mitigation (0.17% fraud rate) and optimized hyperparameters for classification reliability[cite: 2].</p>
+            <p><strong>Outcome:</strong> Achieved an outstanding F1-score of 0.85, significantly reducing potential financial risks and false alarms[cite: 2].</p>
+        </div>
+
+        <div class="card">
+            <h3>2. Netflix Content Trends Analysis</h3>
+            <p><strong>Title:</strong> Analyzed global streaming content data to uncover geographic shifts and historical publishing pacing[cite: 2].</p>
+            <p><strong>Tech Stack / Tools:</strong> Python, Pandas, Matplotlib, Seaborn[cite: 2].</p>
+            <p><strong>My Role & Contributions:</strong> Processed global entertainment datasets to visualize market dominance and map content volume trajectories[cite: 2].</p>
+            <p><strong>Outcome:</strong> Identified and documented a 30% historical increase in TV show production over a five-year window[cite: 2].</p>
+        </div>
+
+        <div class="card">
+            <h3>3. IBM HR Employee Attrition Prediction</h3>
+            <p><strong>Title:</strong> Built an end-to-end predictive classification model to isolate primary drivers of workforce turnover[cite: 2].</p>
+            <p><strong>Tech Stack / Tools:</strong> Python, Logistic Regression, XGBoost, IBM Watson Dataset[cite: 2].</p>
+            <p><strong>My Role & Contributions:</strong> Conducted Exploratory Data Analysis (EDA) to map direct correlations between employee overtime and voluntary attrition[cite: 2].</p>
+            <p><strong>Outcome:</strong> Successfully delivered a predictive model with 88% overall accuracy and an ROC-AUC score of 0.84[cite: 2].</p>
+        </div>
+
+        <div class="card">
+            <h3>4. House Price Prediction</h3>
+            <p><strong>Title:</strong> Developed a robust regression pipeline to forecast residential real estate market pricing[cite: 2].</p>
+            <p><strong>Tech Stack / Tools:</strong> Python, Pandas, Ridge Regression, XGBoost[cite: 2].</p>
+            <p><strong>My Role & Contributions:</strong> Executed log transformations, handled target encoding to manage skewed data features, and selected optimal variables[cite: 2].</p>
+            <p><strong>Outcome:</strong> Minimized Root Mean Squared Error (RMSE) down to 0.12 across competitive validation sets[cite: 2].</p>
+        </div>
+
+        <h2>Technical & Soft Skills</h2>
+        <div class="card">
+            <h3></h3>
+            <div class="tags">
+                <span class="tag">Data Analytics</span><span class="tag">Data Visualization</span><span class="tag">Data Cleaning</span><span class="tag">Statistical Analysis</span><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">MS Excel</span><span class="tag">My SQL</span><span class="tag">Python</span><span class="tag">Scikit-Learn</span><span class="tag">XGBoost</span><span class="tag">Problem-Solving</span><span class="tag">Predictive Modeling</span>
+            </div>
+        </div>
+
+        <h2>Certifications</h2>
+        <div class="card">
+            <h3></h3>
+            <ul>
+                <li>Essentials of Data Analytics — CISCO NWA[cite: 2]</li>
+                <li>Python for Data Science — IBM[cite: 2]</li>
+                <li>Data Analytics — Crio.do[cite: 2]</li>
+            </ul>
+        </div>
+        <h2>Education</h2>
+        <div class="card">
+            <h3></h3>
+            <ul>
+                <li>B.Tech ECE — Bapatla Engineering College (GPA: 7.8/10)[cite: 1]</li>
+                <li>Intermediate (MPC) — Sri Chaitanya Junior College (85.40%)[cite: 1]</li>
+                <li>SSC — Sri Chaitanya Techno High School (99.99%)[cite: 1]</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Gowru Devi Vara Venkata Sai. All Rights Reserved.</p>
     </footer>
+</div>
+
+<script>
+    function switchDomain(domain) {
+        const vlsiSection = document.getElementById('portfolio-vlsi');
+        const dsSection = document.getElementById('portfolio-ds');
+        const btnVlsi = document.getElementById('btn-vlsi');
+        const btnDs = document.getElementById('btn-ds');
+
+        if (domain === 'vlsi') {
+            vlsiSection.classList.add('active');
+            dsSection.classList.remove('active');
+            btnVlsi.classList.add('active-vlsi');
+            btnDs.classList.remove('active-ds');
+        } else {
+            dsSection.classList.add('active');
+            vlsiSection.classList.remove('active');
+            btnDs.classList.add('active-ds');
+            btnVlsi.classList.remove('active-vlsi');
+        }
+    }
+</script>
 
 </body>
 </html>
