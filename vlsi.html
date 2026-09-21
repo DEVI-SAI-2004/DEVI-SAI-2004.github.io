@@ -3,102 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VLSI & Hardware Design Portfolio | Gowru Devi Vara Venkata Sai</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gowru Devi Vara Venkata Sai </title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border-color: #334155;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); }
+        header h1 { font-size: 2.2rem; margin-bottom: 8px; color: #ffffff; }
+        header p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px; }
+        .social-links a { color: var(--accent); text-decoration: none; margin: 0 10px; font-weight: 600; }
+        .social-links a:hover { text-decoration: underline; }
+        h2 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; border-left: 4px solid var(--accent); padding-left: 10px; color: #f1f5f9; }
+        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+        .card h3 { margin-bottom: 10px; color: #ffffff; font-size: 1.2rem; }
+        .card p, .card li { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 8px; }
+        ul { padding-left: 20px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .tag { background-color: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: var(--text-main); }
+        footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
-
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-purple-900 to-indigo-900 text-white py-16 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-3xl md:text-4xl font-bold mb-2">Gowru Devi Vara Venkata Sai</h1>
-            <p class="text-xl text-purple-200 mb-4">RTL Design | Design Verification | DFT | Physical Design Engineer</p>
+<body>
+<div class="container">
+    <header>
+        <h1>GOWRU DEVI VARA VENKATA SAI</h1>
+        <p>kingdsp204@gmail.com | +91 7675940436</p>
+        <p class="text-xl text-purple-200 mb-4">RTL Design | Design Verification | DFT | Physical Design Engineer</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/dsp290930" target="_blank">LinkedIn</a>
+            <a href="https://github.com/DEVI-SAI-2004" target="_blank">GitHub</a>
             <a href="index.html" class="inline-block bg-white text-purple-900 font-semibold px-5 py-2 rounded-lg shadow hover:bg-purple-50 transition text-sm">&larr; Back to Home Hub</a>
         </div>
+        <p style="margin-top: 10px; color: var(--accent); font-weight: bold;"></p>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
+    <h2>Introduction / About Me</h2>
+    <div class="card">
+        <h3>Professional Summary</h3>
+        <p>A highly motivated and passionate B.Tech graduate in Electronics and Communication Engineering with a robust academic foundation in VLSI design, digital electronics, CMOS technology, and core communication systems. Possesses hands-on experience in RTL coding with Verilog and SystemVerilog, functional Design Verification using UVM, and exposure to Physical Design and DFT. Eager to deliver high-impact results as a Graduate Engineer Trainee, RTL, Design Verification, DFT, or Physical Design Engineer.</p>
+        <p><strong>Educational Background:</strong> B.Tech in Electronics and Communication Engineering from Bapatla Engineering College (GPA: 7.8/10, Graduating April 2026).</p>
+    </div>
 
-        <!-- Experience Section -->
-        <section class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-3">Professional Experience & Internships</h2>
-            <div class="space-y-8">
-                <div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                        <h3 class="text-lg font-bold text-slate-800">VLSI Design Intern — Maven Silicon @ aceic</h3>
-                        <span class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">June - July 2025 | Remote</span>
-                    </div>
-                    <ul class="list-disc list-inside space-y-1.5 text-sm text-slate-600">
-                        <li>Designed and verified a System-on-Chip (SoC) component using Verilog, focusing on AMBA protocols (APB, AHB, or AXI) to manage high-performance 32-bit bus infrastructure data transfers[cite: 2].</li>
-                        <li>Developed and executed a comprehensive testbench to verify design functionality, ensuring full compliance with AMBA specifications and identifying logic/timing errors[cite: 2].</li>
-                        <li>Gained hands-on experience with the digital design flow, from RTL coding to functional verification, using EDA tools like ModelSim[cite: 2].</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                        <h3 class="text-lg font-bold text-slate-800">VLSI Design and Verification Intern — Inversion @skillforge, APSCHE</h3>
-                        <span class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">May - July 2025 | Remote</span>
-                    </div>
-                    <ul class="list-disc list-inside space-y-1.5 text-sm text-slate-600">
-                        <li>Designed and implemented an AMBA-based digital system using Verilog and UVM, alongside a traffic light controller using Verilog and SystemVerilog[cite: 2].</li>
-                        <li>Applied advanced CMOS technology principles to optimize circuit design for performance, power, and area (PPA) while ensuring robust digital logic functionality[cite: 2].</li>
-                        <li>Enhanced and executed a comprehensive verification plan using UVM in SystemVerilog to validate system functionality and protocol compliance[cite: 2].</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                        <h3 class="text-lg font-bold text-slate-800">VLSI DFT Intern — BIST Technologies Pvt Ltd</h3>
-                        <span class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">May - June 2024 | Remote</span>
-                    </div>
-                    <ul class="list-disc list-inside space-y-1.5 text-sm text-slate-600">
-                        <li>Acquired foundational knowledge of Design for Testability (DFT) techniques, focusing on scan chain configurations, ATPG generation, and Memory BIST architectures for testable designs[cite: 2].</li>
-                        <li>Modeled fundamental CMOS transistor schematics and logic gates using Microwind layout tools to analyze physical optimization constraints[cite: 2].</li>
-                        <li>Contributed to the development and implementation of on-chip test methodologies like JTAG and Memory Built-In Self-Test (BIST)[cite: 2].</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>1. AMBA Bridge Design</h3>
+        <p><strong>Title:</strong> Designed and implemented an AMBA AHB2APB bridge to manage high-performance data transfers on a 32-bit bus infrastructure.</p>
+        <p><strong>Tech Stack / Tools:</strong> Verilog, SystemVerilog, Quartus Prime Lite, Modelsim.</p>
+        <p><strong>My Role & Contributions:</strong> Developed RTL code for protocol conversions and created custom testbenches for functional verification under various wait states and data transfer simulations.</p>
+        <p><strong>Outcome:</strong> Validated design reliability, ensuring protocol compliance and performance robustness.</p>
+    </div>
+    <div class="card">
+        <h3>2. Verilog-based Pattern Detector Implementation</h3>
+        <p><strong>Title:</strong> Implemented a digital pattern detector to ensure correct state transitions and sequence recognition.</p>
+        <p><strong>Tech Stack / Tools:</strong> Verilog, Finite-State Machine (FSM),EDA Playground.</p>
+        <p><strong>My Role & Contributions:</strong> Programmed the FSM logic and improved a self-checking testbench to automate functional verification across diverse input sequences.</p>
+        <p><strong>Outcome:</strong> Ensured structural accuracy and debugged digital logic for reliable state behavior.</p>
+    </div>
+    <div class="card">
+        <h3>3. Implementation of Traffic Light Controller</h3>
+        <p><strong>Title:</strong> Designed an automated traffic light controller to demonstrate sequential circuit proficiency.</p>
+        <p><strong>Tech Stack / Tools:</strong> Verilog, SystemVerilog, UVM, EDA Playground.</p>
+        <p><strong>My Role & Contributions:</strong> Developed a comprehensive verification environment using UVM, building a self-checking testbench with constrained random stimulus generation and functional coverage.</p>
+        <p><strong>Outcome:</strong> Achieved high verification closure and isolated critical design cases.</p>
+    </div>
 
-        <!-- Projects Section -->
-        <section class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-3">Hardware & VLSI Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                    <h3 class="font-bold text-slate-900 text-lg mb-1">AMBA Bridge Design</h3>
-                    <p class="text-xs font-semibold text-purple-600 mb-3">Verilog, SystemVerilog</p>
-                    <p class="text-sm text-slate-600">Designed and implemented an AMBA AHB2APB bridge in Verilog/SystemVerilog, developed RTL code for protocol conversions, and created a testbench for functional verification[cite: 2]. Validated design across various cases including wait states and data transfers[cite: 2].</p>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                    <h3 class="font-bold text-slate-900 text-lg mb-1">Implementation of Traffic Light Controller</h3>
-                    <p class="text-xs font-semibold text-purple-600 mb-3">Verilog, UVM, FSM</p>
-                    <p class="text-sm text-slate-600">Designed and executed a traffic light controller using a Finite State Machine (FSM)[cite: 2]. Developed a comprehensive UVM verification environment with constrained random stimulus generation and functional coverage to achieve high verification closure[cite: 2].</p>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 md:col-span-2">
-                    <h3 class="font-bold text-slate-900 text-lg mb-1">Verilog-based Pattern Detector Implementation</h3>
-                    <p class="text-xs font-semibold text-purple-600 mb-3">Verilog, FSM</p>
-                    <p class="text-sm text-slate-600">Implemented a pattern detector using a Finite-State Machine (FSM) and Verilog[cite: 2]. Improved a self-checking testbench to automate functional verification, ensuring accuracy across various input sequences, state transitions, and output behavior[cite: 2].</p>
-                </div>
-            </div>
-        </section>
+    <h2>Skills & Expertise</h2>
+    <div class="card">
+        <h3>Technical & Soft Skills</h3>
+        <div class="tags">
+            <span class="tag">Verilog-HDL</span><span class="tag">SystemVerilog</span><span class="tag">UVM</span><span class="tag">FSM Design</span><span class="tag">Testbench Development</span><span class="tag">Synopsys Design Compiler</span><span class="tag">Cadence EDA</span><span class="tag">Xilinx Vivado</span><span class="tag">ModelSim</span><span class="tag">Intel Quartus Prime</span><span class="tag">Sentaurus TCAD</span><span class="tag">Microwind</span><span class="tag">Python</span><span class="tag">Embedded C</span><span class="tag">Debugging</span><span class="tag">Team Collaboration</span>
+        </div>
+    </div>
 
-        <!-- Technical Tools -->
-        <section class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-3">VLSI Tools & Certifications</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-600">
-                <div>
-                    <h3 class="font-semibold text-slate-800 mb-1">EDA Tools & HDL:</h3>
-                    <p>Verilog-HDL, SystemVerilog, UVM, FSM Design, Synopsys Design Compiler, Cadence EDA Tools, Xilinx Vivado, ModelSim, Intel Quartus Prime, Sentaurus TCAD, Microwind[cite: 2].</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-slate-800 mb-1">Key Certifications:</h3>
-                    <p>Semiconductor Workforce Development (Samsung & Synopsys), VLSI System-on-Chip Design (Maven Silicon), VLSI Design Methodologies (Maven Silicon)[cite: 2].</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-    <footer class="bg-slate-900 text-slate-400 text-center py-6 mt-12">
+    <h2>Certifications</h2>
+    <div class="card">
+        <h3>Credentials</h3>
+        <ul>
+            <li>Semiconductor Workforce Development — Samsung & Synopsys</li>
+            <li>VLSI System-on-Chip Design & Design Methodologies — Maven Silicon</li>
+            <li>Ethical Hacking and Cyber Security Applications — CISCO NWA</li>
+        </ul>
+    </div>
+    <h2>Education</h2>
+    <div class="card">
+        <h3>Credentials</h3>
+        <ul>
+            <li>B.Tech ECE — Bapatla Engineering College (GPA: 7.8/10)</li>
+            <li>Intermediate (MPC) — Sri Chaitanya Junior College (85.40%)</li>
+            <li>SSC — Sri Chaitanya Techno High School (99.99%)</li>
+        </ul>
+    </div>
+    
+    <footer>
         <p>&copy; 2026 Gowru Devi Vara Venkata Sai. All Rights Reserved.</p>
     </footer>
+</div>
 </body>
 </html>
